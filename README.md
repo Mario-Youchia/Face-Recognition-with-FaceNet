@@ -20,6 +20,18 @@ The dataset contains **111 face images across 11 identities**. Faces are detecte
 | Verification pair accuracy | 96.443% |
 | Verification balanced accuracy | 90.849% |
 
+### Held-Out Predictions
+
+The classifier correctly identified all 23 images in the held-out test set.
+
+![Held-Out Prediction Gallery](assets/held-out-prediction-gallery.png)
+
+### Face Verification
+
+The verification threshold was selected using training-image pairs and evaluated separately on held-out test pairs.
+
+![Verification Similarity Distribution](assets/verification-similarity-distribution.png)
+
 ## Workflow
 
 1. Detect and prepare faces using OpenCV.
