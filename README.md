@@ -24,7 +24,7 @@ The dataset contains **111 face images across 11 identities**. Faces are detecte
 
 The classifier correctly identified all 23 images in the held-out test set.
 
-![Held-Out Prediction Gallery](assets/held-out-prediction-gallery.png)
+![Held-Out Prediction Gallery](assets/test-prediction-gallery.png)
 
 ### Face Verification
 
