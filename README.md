@@ -1,12 +1,12 @@
 # Face Recognition with FaceNet
 
-A face-recognition and face-verification project using pretrained FaceNet embeddings, a linear SVM classifier, and cosine similarity.
+A face-recognition and face-verification project using pretrained FaceNet embeddings.
 
 ![Face Recognition Confusion Matrix](assets/confusion-matrix.png)
 
 ## Overview
 
-The dataset contains **111 face images across 11 identities**. Faces are detected and prepared with OpenCV, converted into 128-dimensional FaceNet embeddings, and used for identity classification and face verification.
+The dataset contains **111 face images across 11 identities**. 
 
 ## Results
 
@@ -20,15 +20,15 @@ The dataset contains **111 face images across 11 identities**. Faces are detecte
 | Verification pair accuracy | 96.443% |
 | Verification balanced accuracy | 90.849% |
 
-### Held-Out Predictions
+### Test Set Predictions
 
-The classifier correctly identified all 23 images in the held-out test set.
+The classifier correctly identified all 23 images in the test set.
 
 ![Held-Out Prediction Gallery](assets/test-prediction-gallery.png)
 
 ### Face Verification
 
-The verification threshold was selected using training-image pairs and evaluated separately on held-out test pairs.
+The verification threshold was selected using training-image pairs and not chosen manually.
 
 ![Verification Similarity Distribution](assets/verification-similarity-distribution.png)
 
@@ -37,12 +37,8 @@ The verification threshold was selected using training-image pairs and evaluated
 1. Detect and prepare faces using OpenCV.
 2. Generate embeddings using pretrained FaceNet.
 3. Train a normalized linear SVM classifier.
-4. Evaluate using repeated stratified cross-validation and a held-out test set.
+4. Evaluate using repeated stratified cross-validation and a test set.
 5. Verify whether two images contain the same person using cosine similarity.
-
-## Technologies
-
-Python, TensorFlow, Keras, FaceNet, OpenCV, scikit-learn, NumPy, and Matplotlib.
 
 ## Notebook
 
@@ -50,4 +46,4 @@ Python, TensorFlow, Keras, FaceNet, OpenCV, scikit-learn, NumPy, and Matplotlib.
 
 ## Limitations
 
-The dataset is small and curated, so the results do not represent universal real-world performance. The classifier is closed-set and always predicts one of the known identities. More varied images and unknown-person testing would be required for production use.
+The dataset is very small, so the results do not represent universal real-world performance.
